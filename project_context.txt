@@ -1,0 +1,199 @@
+Project structure:
+.
+├── README.md
+├── android
+│   ├── app
+│   │   ├── build.gradle
+│   │   ├── capacitor.build.gradle
+│   │   ├── google-services.json
+│   │   ├── proguard-rules.pro
+│   │   └── src
+│   ├── build.gradle
+│   ├── capacitor.settings.gradle
+│   ├── gradle
+│   │   └── wrapper
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── settings.gradle
+│   └── variables.gradle
+├── capacitor.config.ts
+├── codebase_files.txt
+├── index.html
+├── ionic.config.json
+├── ios
+│   └── App
+│       ├── App
+│       ├── App.xcodeproj
+│       ├── App.xcworkspace
+│       ├── Podfile
+│       └── Podfile.lock
+├── package-lock.json
+├── package.json
+├── project_context.txt
+├── public
+│   ├── assets
+│   │   ├── icon
+│   │   ├── ionitron.png
+│   │   └── shapes.svg
+│   ├── index.html
+│   └── manifest.json
+├── scripts
+│   ├── lib
+│   │   ├── capacitor.mjs
+│   │   ├── cli.mjs
+│   │   ├── fn.mjs
+│   │   ├── fs.mjs
+│   │   ├── npm.mjs
+│   │   ├── repo.mjs
+│   │   ├── subprocess.mjs
+│   │   └── version.mjs
+│   ├── toggle-local.mjs
+│   └── update-all.mjs
+├── src
+│   ├── App.test.tsx
+│   ├── App.tsx
+│   ├── components
+│   │   ├── LocalNotificationTest.tsx
+│   │   ├── Menu.css
+│   │   ├── Menu.tsx
+│   │   ├── NotificationChannelsTest.module.css
+│   │   ├── NotificationChannelsTest.tsx
+│   │   └── NotificationsTest.tsx
+│   ├── index.tsx
+│   ├── pages
+│   │   ├── ActionSheet.tsx
+│   │   ├── App.tsx
+│   │   ├── Browser.tsx
+│   │   ├── Camera.tsx
+│   │   ├── Clipboard.tsx
+│   │   ├── Console.tsx
+│   │   ├── Cookies.tsx
+│   │   ├── Device.tsx
+│   │   ├── Dialog.tsx
+│   │   ├── Filesystem.tsx
+│   │   ├── Geolocation.tsx
+│   │   ├── Haptics.tsx
+│   │   ├── Home.tsx
+│   │   ├── Http.tsx
+│   │   ├── Keyboard.tsx
+│   │   ├── LocalNotifications.css
+│   │   ├── LocalNotifications.tsx
+│   │   ├── Motion.tsx
+│   │   ├── Network.css
+│   │   ├── Network.tsx
+│   │   ├── Preferences.tsx
+│   │   ├── PushNotifications.css
+│   │   ├── PushNotifications.tsx
+│   │   ├── ScreenOrientation.tsx
+│   │   ├── ScreenReader.tsx
+│   │   ├── Share.tsx
+│   │   ├── SplashScreen.tsx
+│   │   ├── StatusBar.tsx
+│   │   ├── TextZoom.tsx
+│   │   └── Toast.tsx
+│   ├── routes.tsx
+│   ├── serviceWorker.ts
+│   ├── setupTests.ts
+│   ├── theme
+│   │   ├── global.css
+│   │   └── variables.css
+│   ├── utils
+│   │   └── dom.ts
+│   └── vite-env.d.ts
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+21 directories, 84 files
+Package.json content:
+{
+  "name": "capacitor-testapp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "build": "tsc && vite build",
+    "fmt": "npm run prettier -- --write",
+    "lint": "npm run prettier -- --check",
+    "prettier": "prettier '{src,scripts,public}/**/*.{css,html,ts,tsx,mjs}'",
+    "start": "vite",
+    "toggle-local": "node ./scripts/toggle-local.mjs",
+    "update-all": "node ./scripts/update-all.mjs"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@capacitor/action-sheet": "^7.0.0",
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/app-launcher": "^7.0.0",
+    "@capacitor/browser": "^7.0.0",
+    "@capacitor/camera": "^7.0.0",
+    "@capacitor/clipboard": "^7.0.0",
+    "@capacitor/core": "^7.0.1",
+    "@capacitor/device": "^7.0.0",
+    "@capacitor/dialog": "^7.0.0",
+    "@capacitor/filesystem": "^7.0.0",
+    "@capacitor/geolocation": "^7.0.0",
+    "@capacitor/haptics": "^7.0.0",
+    "@capacitor/ios": "^7.0.1",
+    "@capacitor/keyboard": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.0",
+    "@capacitor/motion": "^7.0.0",
+    "@capacitor/network": "^7.0.0",
+    "@capacitor/preferences": "^7.0.0",
+    "@capacitor/push-notifications": "^7.0.0",
+    "@capacitor/screen-orientation": "^7.0.0",
+    "@capacitor/screen-reader": "^7.0.0",
+    "@capacitor/share": "^7.0.0",
+    "@capacitor/splash-screen": "^7.0.0",
+    "@capacitor/status-bar": "^7.0.0",
+    "@capacitor/text-zoom": "^7.0.0",
+    "@capacitor/toast": "^7.0.0",
+    "@ionic/pwa-elements": "^3.1.1",
+    "@ionic/react": "^7.0.0",
+    "@ionic/react-router": "^7.0.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^18.0.0",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.6",
+    "ionicons": "^7.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/classnames": "^2.2.11",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-legacy": "^4.0.2",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cross-spawn": "^7.0.3",
+    "eslint": "^8.35.0",
+    "eslint-plugin-react": "^7.32.2",
+    "jsdom": "^22.0.0",
+    "prettier": "^2.0.5",
+    "terser": "^5.17.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.3.7",
+    "vitest": "^0.29.2"
+  }
+}
